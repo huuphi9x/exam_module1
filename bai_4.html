@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<canvas id="rectangle"></canvas>
+<script>
+    function Rectangle(x, y, width, height, color) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.color = color;
+
+        this.creteRectangle = function () {
+            let ctx = document.getElementById('rectangle').getContext('2d');
+            ctx.beginPath();
+            ctx.fillStyle = color;
+            ctx.fillRect(x, y, width, height);
+        }
+    }
+
+    let rectangle = new Rectangle(10, 10, 200, 100, '#000000');
+    rectangle.creteRectangle();
+</script>
+</body>
+</html>
